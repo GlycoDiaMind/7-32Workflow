@@ -1,0 +1,2 @@
+制作了Workflow的Demo，
+Front方面，计划采用Gradio
