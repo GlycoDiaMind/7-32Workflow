@@ -6,8 +6,8 @@ sys.path.append("../SumDS/Sumv2_single.py")  # Sumv2_single 所在路径
 sys.path.append("../DiabetesPDiagLLM/src/train/DS_inference.py")  # DS_inference 所在路径
 
 # 引入模块函数
-from Sumv2_single import preprocess_text_batch  # 示例方法名，请根据实际函数改
-from DS_inference import run_inference          # 示例方法名，请根据实际函数改
+from Sumv2_single import query_llm_single  # 见原函数名
+from DS_inference import inference          # 同上
 
 # 主工作流
 def main():
@@ -24,12 +24,12 @@ def main():
         return
 
     # 使用 DeepSeek-7B 预处理
-    preprocessed_inputs = preprocess_text_batch(raw_inputs)
+    preprocessed_inputs = query_llm_single(raw_inputs)
 
     # 使用 DeepSeek-32B 推理
     results = []
     for item in preprocessed_inputs:
-        result = run_inference(item)
+        result = inference(item)
         results.append(result)
 
     # 保存结果为 JSON 文件
