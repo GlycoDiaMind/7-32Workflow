@@ -49,15 +49,6 @@ DeepSeek-32B 分析用户数据
 
 ---
 
-##  文件结构
-
-7-32Workflow/
-├── Front/front.py                   # Gradio 前端调用代码
-├── Flow/workflow.py         # 工作流核心逻辑&主流程调用入口
-└── README.md                # 当前说明文档
-
----
-
 ##  使用说明
 
 1. 激活 `SumDS` 虚拟环境；
